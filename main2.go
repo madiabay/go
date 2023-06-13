@@ -28,4 +28,7 @@ func main() {
 	} else {
 		fmt.Println("OK")
 	}
+
+	var age int8
+	fmt.Scan(&age)
 }
