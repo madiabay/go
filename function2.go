@@ -19,12 +19,22 @@ import "fmt"
 // 	some_function(square)
 // }
 
-func some_func(str string) func() {
+// func some_func(str string) func() {
+// 	return func() {
+// 		fmt.Println("Hello", str)
+// 	}
+// }
+// func main() {
+// 	a := some_func("Madi")
+// 	a()
+// }
+
+func some_func(x string) func() {
 	return func() {
-		fmt.Println("Hello", str)
+		fmt.Println(x)
 	}
 }
+
 func main() {
-	a := some_func("Madi")
-	a()
+	some_func("Hello")()
 }
